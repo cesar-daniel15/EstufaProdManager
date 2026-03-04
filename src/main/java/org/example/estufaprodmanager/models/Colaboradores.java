@@ -40,13 +40,13 @@ public class Colaboradores implements Serializable {
     @Column(name = "estado_civil")
     private String estadoCivil;
 
-    @Column(name = "morada")
+    @Column(name = "morada", nullable = false)
     private String morada;
 
-    @Column(name = "codigo_postal")
+    @Column(name = "codigo_postal", nullable = false)
     private String codigoPostal;
 
-    @Column(name = "contacto")
+    @Column(name = "contacto", nullable = false)
     private String contacto;
 
     @Column(name = "foto_colaborador")
