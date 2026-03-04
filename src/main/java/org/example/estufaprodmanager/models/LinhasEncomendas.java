@@ -11,6 +11,7 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -19,8 +20,8 @@ import java.util.Date;
 @ToString
 @SuperBuilder
 @NoArgsConstructor
-@Table(name = "utilizadores")
-public class Utilizadores implements Serializable {
+@Table(name = "linhas_encomendas")
+public class LinhasEncomendas implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,28 +29,20 @@ public class Utilizadores implements Serializable {
     @Column(name = "id", nullable = false)
     private String id;
 
-    @Column(name = "nome", nullable = false)
-    private String nome;
+    @Column(name = "id_encomenda", nullable = false)
+    private String idEncomenda;
 
-    @Column(name = "email", nullable = false)
-    private String email;
+    @Column(name = "id_produto", nullable = false)
+    private String idProduto;
 
-    @Column(name = "palavra_passe", nullable = false)
-    private String palavraPasse;
-    @Column(name = "id_perfil", nullable = false)
-    private String idPerfil;
+    @Column(name = "quantidade", nullable = false)
+    private Long quantidade;
 
-    @Column(name = "perfil", nullable = false)
-    private String perfil;
+    @Column(name = "preco_unitario", nullable = false)
+    private BigDecimal precoUnitario;
 
-    @Column(name = "estado_conta", nullable = false)
-    private String estadoConta;
-
-    @Column(name = "ultimo_login")
-    private Date ultimoLogin;
-
-    @Column(name = "criado_por")
-    private String criadoPor;
+    @Column(name = "total_linha", nullable = false)
+    private BigDecimal totalLinha;
 
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
