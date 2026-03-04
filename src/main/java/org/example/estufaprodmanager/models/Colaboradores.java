@@ -34,7 +34,6 @@ public class Colaboradores implements Serializable {
     @Column(name = "horario_trabalho")
     private String horarioTrabalho;
 
-    @Column(name = "nif", nullable = false)
     @Column(name = "nif")
     private String nif;
 
