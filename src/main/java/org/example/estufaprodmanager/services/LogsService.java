@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -19,36 +20,45 @@ public class LogsService {
         return repository.findAll();
     }
 
-    // List by Id
-    public Logs getById (UUID id){
-        return repository.findById(id).orElseThrow(()-> new RuntimeException("Log não encontrado"));
+    // List by UUID
+    public Optional<Logs> getById(UUID id){
+        return repository.findById(id);
     }
-
 
     // Create
-    public Logs create(Logs entity){
-        entity.setId(UUID.randomUUID());
-        return repository.save(entity);
-    }
-
-
-    // Update
-    public Logs update (UUID id, Logs novaLog){
-        Logs log = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Log não encontrada"));
-
-        log.setDescricao(novaLog.getDescricao());
-        log.setAcao(novaLog.getAcao());
-        log.setEcraOrigem(novaLog.getEcraOrigem());
-        log.setIpOrigem(novaLog.getIpOrigem());
-        log.setUserAgent(novaLog.getUserAgent());
-
+    public Logs create(Logs log){
+        log.setId(UUID.randomUUID());
         return repository.save(log);
     }
 
+    // Update
+    public Logs update(UUID id, Logs novaLog){
+
+        Optional<Logs> logExistente = repository.findById(id);
+
+        if(logExistente.isPresent()){
+
+            Logs log = logExistente.get();
+
+            log.setDescricao(novaLog.getDescricao());
+            log.setAcao(novaLog.getAcao());
+            log.setEcraOrigem(novaLog.getEcraOrigem());
+            log.setIpOrigem(novaLog.getIpOrigem());
+            log.setUserAgent(novaLog.getUserAgent());
+
+            return repository.save(log);
+
+        } else {
+            throw new RuntimeException("Log não encontrado com o ID: " + id);
+        }
+    }
 
     // Delete
     public void delete(UUID id){
-        repository.deleteById(id);
+        if(repository.existsById(id)){
+            repository.deleteById(id);
+        } else {
+            throw new RuntimeException("Log não encontrado");
+        }
     }
 }
