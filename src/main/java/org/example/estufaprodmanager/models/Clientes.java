@@ -37,13 +37,14 @@ public class Clientes implements Serializable {
     @Column(name = "setor_atividade")
     private String setorAtividade;
 
-    @Column(name = "morada")
+
+    @Column(name = "morada", nullable = false)
     private String morada;
 
-    @Column(name = "codigo_postal")
+    @Column(name = "codigo_postal", nullable = false)
     private String codigoPostal;
 
-    @Column(name = "contacto")
+    @Column(name = "contacto", nullable = false)
     private String contacto;
 
     @Column(name = "criado_por")

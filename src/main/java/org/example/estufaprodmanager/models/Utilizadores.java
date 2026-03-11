@@ -39,8 +39,8 @@ public class Utilizadores implements Serializable {
     @Column(name = "id_perfil", nullable = false)
     private String idPerfil;
 
-    @Column(name = "perfil", nullable = false)
-    private String perfil;
+    @Column(name = "id_perfil", nullable = false)
+    private String idPerfil;
 
     @Column(name = "estado_conta", nullable = false)
     private String estadoConta;
