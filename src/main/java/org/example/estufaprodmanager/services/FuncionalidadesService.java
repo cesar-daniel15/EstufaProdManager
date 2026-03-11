@@ -27,7 +27,7 @@ public class FuncionalidadesService {
 
     // Create
     public Funcionalidades save(Funcionalidades entity){
-
+        return entity;
     }
 
     // Delete
