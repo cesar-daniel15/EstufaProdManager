@@ -35,9 +35,6 @@ public class Encomendas implements Serializable {
     @Column(name = "valor_final", nullable = false)
     private BigDecimal valorFinal;
 
-    @Column(name = "data_final")
-    private Date dataFinal;
-
     @Column(name = "iva_total", nullable = false)
     private BigDecimal ivaTotal;
 
