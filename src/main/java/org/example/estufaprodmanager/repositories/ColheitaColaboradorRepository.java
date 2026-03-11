@@ -4,6 +4,8 @@ import org.example.estufaprodmanager.models.ColheitaColaborador;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface ColheitaColaboradorRepository extends JpaRepository<ColheitaColaborador, String>, JpaSpecificationExecutor<ColheitaColaborador> {
+import java.util.UUID;
+
+public interface ColheitaColaboradorRepository extends JpaRepository<ColheitaColaborador, UUID>, JpaSpecificationExecutor<ColheitaColaborador> {
 
 }
