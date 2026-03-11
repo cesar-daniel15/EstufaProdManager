@@ -11,7 +11,6 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -20,8 +19,8 @@ import java.util.Date;
 @ToString
 @SuperBuilder
 @NoArgsConstructor
-@Table(name = "encomendas")
-public class Encomendas implements Serializable {
+@Table(name = "monitorizacoes")
+public class Monitorizacoes implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -29,25 +28,22 @@ public class Encomendas implements Serializable {
     @Column(name = "id", nullable = false)
     private String id;
 
-    @Column(name = "id_cliente", nullable = false)
-    private String idCliente;
+    @Column(name = "titulo", nullable = false)
+    private String titulo;
 
-    @Column(name = "valor_final", nullable = false)
-    private BigDecimal valorFinal;
+    @Column(name = "observacoes")
+    private String observacoes;
 
-    @Column(name = "iva_total", nullable = false)
-    private BigDecimal ivaTotal;
+    @Column(name = "anexos")
+    private String anexos;
 
-    @Column(name = "desconto_total", nullable = false)
-    private BigDecimal descontoTotal;
+    @Column(name = "id_colaborador", nullable = false)
+    private String idColaborador;
 
-    @Column(name = "estado_encomenda", nullable = false)
-    private String estadoEncomenda;
+    @Column(name = "id_plantacao", nullable = false)
+    private String idPlantacao;
 
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
-
-    @Column(name = "data_atualizacao")
-    private Date dataAtualizacao;
 
 }

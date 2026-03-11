@@ -19,8 +19,8 @@ import java.util.Date;
 @ToString
 @SuperBuilder
 @NoArgsConstructor
-@Table(name = "utilizadores")
-public class Utilizadores implements Serializable {
+@Table(name = "horticolas")
+public class Horticolas implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,22 +31,11 @@ public class Utilizadores implements Serializable {
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "email", nullable = false)
-    private String email;
+    @Column(name = "descricao")
+    private String descricao;
 
-    @Column(name = "palavra_passe", nullable = false)
-    private String palavraPasse;
-    @Column(name = "id_perfil", nullable = false)
-    private String idPerfil;
-
-    @Column(name = "perfil", nullable = false)
-    private String perfil;
-
-    @Column(name = "estado_conta", nullable = false)
-    private String estadoConta;
-
-    @Column(name = "ultimo_login")
-    private Date ultimoLogin;
+    @Column(name = "categoria", nullable = false)
+    private String categoria;
 
     @Column(name = "criado_por")
     private String criadoPor;
