@@ -30,7 +30,6 @@ public class VariedadesHorticolasService {
         variedade.setId(UUID.randomUUID());
         return repository.save(variedade);
     }
-
     
     // Update
     public VariedadesHorticolas update(UUID id, VariedadesHorticolas novaVariedade){
