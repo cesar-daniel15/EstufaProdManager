@@ -26,7 +26,7 @@ public class EncomendasService {
     }
 
     // Create
-    public Encomendas save(Encomendas encomenda){
+    public Encomendas create(Encomendas encomenda){
         encomenda.setId(UUID.randomUUID());
         return repository.save(encomenda);
     }
