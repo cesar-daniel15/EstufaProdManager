@@ -26,7 +26,7 @@ public class HorticolasService {
     }
 
     // Create
-    public Horticolas save(Horticolas horticola){
+    public Horticolas create(Horticolas horticola){
         horticola.setId(UUID.randomUUID());
         return repository.save(horticola);
     }
