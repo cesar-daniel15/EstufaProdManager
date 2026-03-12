@@ -13,6 +13,7 @@ import lombok.experimental.SuperBuilder;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -27,7 +28,7 @@ public class LinhasEncomendas implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "id_encomenda", nullable = false)
     private String idEncomenda;
