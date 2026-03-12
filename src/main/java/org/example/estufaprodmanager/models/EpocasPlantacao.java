@@ -12,6 +12,7 @@ import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -26,7 +27,7 @@ public class EpocasPlantacao implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "ano", nullable = false)
     private String ano;

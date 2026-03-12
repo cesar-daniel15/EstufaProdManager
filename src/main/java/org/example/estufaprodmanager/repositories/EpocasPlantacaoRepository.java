@@ -4,6 +4,8 @@ import org.example.estufaprodmanager.models.EpocasPlantacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface EpocasPlantacaoRepository extends JpaRepository<EpocasPlantacao, String>, JpaSpecificationExecutor<EpocasPlantacao> {
+import java.util.UUID;
+
+public interface EpocasPlantacaoRepository extends JpaRepository<EpocasPlantacao, UUID>, JpaSpecificationExecutor<EpocasPlantacao> {
 
 }
