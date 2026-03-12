@@ -1,5 +1,6 @@
 package org.example.estufaprodmanager.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
+@JsonPropertyOrder({ "id", "nome", "descricao", "dataCriacao" })
 @Entity
 @Getter
 @Setter
