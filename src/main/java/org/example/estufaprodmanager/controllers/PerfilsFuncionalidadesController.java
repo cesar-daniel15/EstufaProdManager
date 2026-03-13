@@ -1,8 +1,6 @@
 package org.example.estufaprodmanager.controllers;
 
-import org.example.estufaprodmanager.models.Funcionalidades;
 import org.example.estufaprodmanager.models.PerfisFuncionalidades;
-import org.example.estufaprodmanager.services.FuncionalidadesService;
 import org.example.estufaprodmanager.services.PerfisFuncionalidadesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
