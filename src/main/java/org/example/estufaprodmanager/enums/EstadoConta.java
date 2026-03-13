@@ -1,4 +1,7 @@
 package org.example.estufaprodmanager.enums;
 
-public class EstadoConta {
+public enum EstadoConta {
+    Ativa,
+    Bloqueada,
+    Inativa
 }
