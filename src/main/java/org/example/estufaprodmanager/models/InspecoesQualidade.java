@@ -31,10 +31,10 @@ public class InspecoesQualidade implements Serializable {
     private UUID id;
 
     @Column(name = "id_colheita", nullable = false)
-    private String idColheita;
+    private UUID idColheita;
 
     @Column(name = "inspecionado_por")
-    private String inspecionadoPor;
+    private UUID inspecionadoPor;
 
     @Column(name = "quantidade_aprovada")
     private BigDecimal quantidadeAprovada;
