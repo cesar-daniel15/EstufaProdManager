@@ -33,6 +33,7 @@ public class EstufaProdManagerApplication implements CommandLineRunner {
 
     @Autowired
     private VariedadesHorticolasService variedadesHorticolasService;
+
     @Autowired
     private HorticolasRepository horticolasRepository;
 
