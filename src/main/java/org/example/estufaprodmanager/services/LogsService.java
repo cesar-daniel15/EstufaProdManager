@@ -27,7 +27,6 @@ public class LogsService {
 
     // Create
     public Logs create(Logs log){
-        log.setId(UUID.randomUUID());
         return repository.save(log);
     }
 

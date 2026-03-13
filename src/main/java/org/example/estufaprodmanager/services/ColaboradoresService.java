@@ -27,7 +27,6 @@ public class ColaboradoresService {
 
     // Create
     public Colaboradores create(Colaboradores colaborador){
-        colaborador.setId(UUID.randomUUID());
         return repository.save(colaborador);
     }
 

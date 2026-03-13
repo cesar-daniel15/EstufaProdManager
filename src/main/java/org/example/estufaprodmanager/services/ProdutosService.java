@@ -27,7 +27,6 @@ public class ProdutosService {
 
     // Create
     public Produtos create(Produtos produto){
-        produto.setId(UUID.randomUUID());
         return repository.save(produto);
     }
 

@@ -27,7 +27,6 @@ public class ClientesService {
 
     // Create
     public Clientes create(Clientes cliente){
-        cliente.setId(UUID.randomUUID());
         return repository.save(cliente);
     }
 

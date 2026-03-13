@@ -27,7 +27,6 @@ public class ColheitaColaboradorService {
 
     // Create
     public ColheitaColaborador create(ColheitaColaborador colheitaColaborador){
-        colheitaColaborador.setId(UUID.randomUUID());
         return repository.save(colheitaColaborador);
     }
 

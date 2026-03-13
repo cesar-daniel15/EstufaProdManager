@@ -27,7 +27,6 @@ public class EstufasService {
 
     // Create
     public Estufas create(Estufas estufa){
-        estufa.setId(UUID.randomUUID());
         return repository.save(estufa);
     }
 

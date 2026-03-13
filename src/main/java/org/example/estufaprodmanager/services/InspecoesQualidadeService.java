@@ -27,7 +27,6 @@ public class InspecoesQualidadeService {
 
     // Create
     public InspecoesQualidade create(InspecoesQualidade inspecao){
-        inspecao.setId(UUID.randomUUID());
         return repository.save(inspecao);
     }
 

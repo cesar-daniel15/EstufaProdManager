@@ -28,8 +28,13 @@ public class UtilizadoresService {
     }
 
     // Create
-    public Utilizadores create(Utilizadores utilizadores){
-        return repository.save(utilizadores);
+    public Utilizadores create(Utilizadores utilizador){
+
+        if (repository.existsByEmail(utilizador.getEmail())) {
+            throw new RuntimeException("Já existe um utilizador com esse email");
+        }
+
+        return repository.save(utilizador);
     }
 
     // Update

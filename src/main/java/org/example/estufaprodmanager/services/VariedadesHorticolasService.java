@@ -27,7 +27,11 @@ public class VariedadesHorticolasService {
 
     // Create
     public VariedadesHorticolas create(VariedadesHorticolas variedade){
-        variedade.setId(UUID.randomUUID());
+
+        if (repository.existsByNome(variedade.getNome())) {
+            throw new RuntimeException("Já existe essa variedade");
+        }
+
         return repository.save(variedade);
     }
     

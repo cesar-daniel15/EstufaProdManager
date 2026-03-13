@@ -27,7 +27,6 @@ public class LinhasEncomendasService {
 
     // Create
     public LinhasEncomendas create(LinhasEncomendas linha){
-        linha.setId(UUID.randomUUID());
         return repository.save(linha);
     }
 

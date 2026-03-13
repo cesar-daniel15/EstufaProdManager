@@ -27,7 +27,11 @@ public class HorticolasService {
 
     // Create
     public Horticolas create(Horticolas horticola){
-        horticola.setId(UUID.randomUUID());
+
+        if (repository.existsByNome(horticola.getNome())) {
+            throw new RuntimeException("Já existe essa horticola");
+        }
+
         return repository.save(horticola);
     }
 

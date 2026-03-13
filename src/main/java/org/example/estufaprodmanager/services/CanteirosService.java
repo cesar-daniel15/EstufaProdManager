@@ -27,7 +27,6 @@ public class CanteirosService {
 
     // Create
     public Canteiros create(Canteiros canteiro){
-        canteiro.setId(UUID.randomUUID());
         return repository.save(canteiro);
     }
 

@@ -27,7 +27,6 @@ public class MonitorizacoesService {
 
     // Create
     public Monitorizacoes create(Monitorizacoes monitorizacao){
-        monitorizacao.setId(UUID.randomUUID());
         return repository.save(monitorizacao);
     }
 

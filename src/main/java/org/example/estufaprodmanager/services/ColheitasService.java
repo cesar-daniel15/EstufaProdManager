@@ -27,7 +27,6 @@ public class ColheitasService {
 
     // Create
     public Colheitas create(Colheitas colheita){
-        colheita.setId(UUID.randomUUID());
         return repository.save(colheita);
     }
 

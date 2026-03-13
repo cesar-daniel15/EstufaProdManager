@@ -27,7 +27,6 @@ public class PlantacoesService {
 
     // Create
     public Plantacoes create(Plantacoes plantacao){
-        plantacao.setId(UUID.randomUUID());
         return repository.save(plantacao);
     }
 

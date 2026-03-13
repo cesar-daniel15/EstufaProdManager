@@ -27,7 +27,6 @@ public class EpocasPlantacaoService {
 
     // Create
     public EpocasPlantacao create(EpocasPlantacao epoca){
-        epoca.setId(UUID.randomUUID());
         return repository.save(epoca);
     }
 
