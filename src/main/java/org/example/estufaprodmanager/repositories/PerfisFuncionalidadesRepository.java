@@ -4,6 +4,8 @@ import org.example.estufaprodmanager.models.PerfisFuncionalidades;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface PerfisFuncionalidadesRepository extends JpaRepository<PerfisFuncionalidades, String>, JpaSpecificationExecutor<PerfisFuncionalidades> {
+import java.util.UUID;
+
+public interface PerfisFuncionalidadesRepository extends JpaRepository<PerfisFuncionalidades, UUID>, JpaSpecificationExecutor<PerfisFuncionalidades> {
 
 }
