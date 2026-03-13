@@ -29,7 +29,7 @@ public class VariedadesHorticolas implements Serializable {
     private UUID id;
 
     @Column(name = "id_horticola", nullable = false)
-    private String idHorticola;
+    private UUID idHorticola;
 
     @Column(name = "nome", nullable = false)
     private String nome;
@@ -50,7 +50,7 @@ public class VariedadesHorticolas implements Serializable {
     private String imagem;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

@@ -30,10 +30,10 @@ public class LinhasEncomendas implements Serializable {
     private UUID id;
 
     @Column(name = "id_encomenda", nullable = false)
-    private String idEncomenda;
+    private UUID idEncomenda;
 
     @Column(name = "id_produto", nullable = false)
-    private String idProduto;
+    private UUID idProduto;
 
     @Column(name = "quantidade", nullable = false)
     private Long quantidade;

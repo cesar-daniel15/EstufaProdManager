@@ -43,7 +43,7 @@ public class Estufas implements Serializable {
     private EstadoEstufa estadoEstufa;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

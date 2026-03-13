@@ -31,7 +31,7 @@ public class Encomendas implements Serializable {
     private UUID id;
 
     @Column(name = "id_cliente", nullable = false)
-    private String idCliente;
+    private UUID idCliente;
 
     @Column(name = "valor_final", nullable = false)
     private BigDecimal valorFinal;

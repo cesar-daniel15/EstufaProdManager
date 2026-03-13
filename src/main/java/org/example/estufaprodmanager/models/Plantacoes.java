@@ -31,19 +31,19 @@ public class Plantacoes implements Serializable {
     private UUID id;
 
     @Column(name = "id_epoca_plantacao", nullable = false)
-    private String idEpocaPlantacao;
+    private UUID idEpocaPlantacao;
 
     @Column(name = "id_estufa", nullable = false)
-    private String idEstufa;
+    private UUID idEstufa;
 
     @Column(name = "id_canteiro", nullable = false)
-    private String idCanteiro;
+    private UUID idCanteiro;
 
     @Column(name = "id_horticolas", nullable = false)
-    private String idHorticolas;
+    private UUID idHorticolas;
 
     @Column(name = "id_variedade", nullable = false)
-    private String idVariedade;
+    private UUID idVariedade;
 
     @Column(name = "data_plantacao", nullable = false)
     private Date dataPlantacao;
@@ -63,7 +63,7 @@ public class Plantacoes implements Serializable {
     private EstadoPlantacao estadoPlantacao;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

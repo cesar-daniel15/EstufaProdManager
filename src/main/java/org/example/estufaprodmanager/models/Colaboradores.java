@@ -29,7 +29,7 @@ public class Colaboradores implements Serializable {
     private UUID id;
 
     @Column(name = "id_utilizador", nullable = false)
-    private String idUtilizador;
+    private UUID idUtilizador;
 
     @Column(name = "horario_trabalho")
     private String horarioTrabalho;
@@ -56,7 +56,7 @@ public class Colaboradores implements Serializable {
     private Date dataIngressao;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

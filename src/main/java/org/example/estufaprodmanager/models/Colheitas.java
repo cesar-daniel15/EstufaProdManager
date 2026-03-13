@@ -31,7 +31,7 @@ public class Colheitas implements Serializable {
     private UUID id;
 
     @Column(name = "id_plantacao", nullable = false)
-    private String idPlantacao;
+    private UUID idPlantacao;
 
     @Column(name = "inicio_colheita", nullable = false)
     private Date inicioColheita;

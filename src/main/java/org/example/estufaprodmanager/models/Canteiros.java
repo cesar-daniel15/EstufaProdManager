@@ -29,7 +29,7 @@ public class Canteiros implements Serializable {
     private UUID id;
 
     @Column(name = "id_estufa", nullable = false)
-    private String idEstufa;
+    private UUID idEstufa;
 
     @Column(name = "identificacao", nullable = false)
     private String identificacao;
@@ -38,7 +38,7 @@ public class Canteiros implements Serializable {
     private String tipoSolo;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

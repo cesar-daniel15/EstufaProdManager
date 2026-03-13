@@ -47,7 +47,7 @@ public class EpocasPlantacao implements Serializable {
     private Date fimColheita;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

@@ -28,10 +28,10 @@ public class ColheitaColaborador implements Serializable {
     private UUID id;
 
     @Column(name = "id_colheita", nullable = false)
-    private String idColheita;
+    private UUID idColheita;
 
     @Column(name = "id_colaborador", nullable = false)
-    private String idColaborador;
+    private UUID idColaborador;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "funcao", nullable = false)

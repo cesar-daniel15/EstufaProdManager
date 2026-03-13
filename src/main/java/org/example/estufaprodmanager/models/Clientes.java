@@ -29,7 +29,7 @@ public class Clientes implements Serializable {
     private UUID id;
 
     @Column(name = "id_utilizador", nullable = false)
-    private String idUtilizador;
+    private UUID idUtilizador;
 
     @Column(name = "nif", nullable = false)
     private String nif;
@@ -47,7 +47,7 @@ public class Clientes implements Serializable {
     private String contacto;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

@@ -38,10 +38,10 @@ public class Monitorizacoes implements Serializable {
     private String anexos;
 
     @Column(name = "id_colaborador", nullable = false)
-    private String idColaborador;
+    private UUID idColaborador;
 
     @Column(name = "id_plantacao", nullable = false)
-    private String idPlantacao;
+    private UUID idPlantacao;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

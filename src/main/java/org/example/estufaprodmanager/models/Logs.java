@@ -32,7 +32,7 @@ public class Logs implements Serializable {
     private String acao;
 
     @Column(name = "id_utilizador", nullable = false)
-    private String idUtilizador;
+    private UUID idUtilizador;
 
     @Column(name = "descricao", nullable = false)
     private String descricao;

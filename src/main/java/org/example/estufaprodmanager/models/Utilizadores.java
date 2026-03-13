@@ -41,7 +41,7 @@ public class Utilizadores implements Serializable {
     private String palavraPasse;
 
     @Column(name = "id_perfil", nullable = false)
-    private String idPerfil;
+    private UUID idPerfil;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_conta", nullable = false)
@@ -51,7 +51,7 @@ public class Utilizadores implements Serializable {
     private Date ultimoLogin;
 
     @Column(name = "criado_por")
-    private String criadoPor;
+    private UUID criadoPor;
 
     @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)

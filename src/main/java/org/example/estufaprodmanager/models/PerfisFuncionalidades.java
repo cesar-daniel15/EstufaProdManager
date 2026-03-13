@@ -29,9 +29,9 @@ public class PerfisFuncionalidades implements Serializable {
     private UUID id;
 
     @Column(name = "id_perfil", nullable = false)
-    private String idPerfil;
+    private UUID idPerfil;
 
     @Column(name = "id_funcionalidade", nullable = false)
-    private String idFuncionalidade;
+    private UUID idFuncionalidade;
 
 }
