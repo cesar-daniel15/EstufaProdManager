@@ -37,7 +37,6 @@ public class Clientes implements Serializable {
     @Column(name = "setor_atividade")
     private String setorAtividade;
 
-
     @Column(name = "morada", nullable = false)
     private String morada;
 
