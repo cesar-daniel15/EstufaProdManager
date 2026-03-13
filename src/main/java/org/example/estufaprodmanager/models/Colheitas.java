@@ -1,18 +1,18 @@
 package org.example.estufaprodmanager.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.example.estufaprodmanager.enums.EstadoColheita;
+import org.example.estufaprodmanager.enums.TipoEmbalamento;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -26,8 +26,9 @@ public class Colheitas implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "id_plantacao", nullable = false)
     private String idPlantacao;
@@ -38,8 +39,9 @@ public class Colheitas implements Serializable {
     @Column(name = "fim_colheita")
     private Date fimColheita;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo_embalamento", nullable = false)
-    private String tipoEmbalamento;
+    private TipoEmbalamento tipoEmbalamento;
 
     @Column(name = "peso_total")
     private BigDecimal pesoTotal;
@@ -50,7 +52,8 @@ public class Colheitas implements Serializable {
     @Column(name = "percentagem_aproveitamento")
     private BigDecimal percentagemAproveitamento;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "estado_colheita", nullable = false)
-    private String estadoColheita;
+    private EstadoColheita estadoColheita;
 
 }

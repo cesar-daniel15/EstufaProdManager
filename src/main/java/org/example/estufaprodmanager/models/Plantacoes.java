@@ -1,14 +1,14 @@
 package org.example.estufaprodmanager.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.example.estufaprodmanager.enums.EstadoPlantacao;
+import org.example.estufaprodmanager.enums.TipoProducao;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -25,6 +25,7 @@ public class Plantacoes implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
     private String id;
 
@@ -52,15 +53,18 @@ public class Plantacoes implements Serializable {
     @Column(name = "quantidade_plantada", nullable = false)
     private Long quantidadePlantada;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "tipo_producao", nullable = false)
-    private String tipoProducao;
+    private TipoProducao tipoProducao;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "estado_plantacao", nullable = false)
-    private String estadoPlantacao;
+    private EstadoPlantacao estadoPlantacao;
 
     @Column(name = "criado_por")
     private String criadoPor;
 
+    @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
 

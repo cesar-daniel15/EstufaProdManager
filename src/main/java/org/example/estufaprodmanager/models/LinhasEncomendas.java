@@ -1,18 +1,17 @@
 package org.example.estufaprodmanager.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -26,8 +25,9 @@ public class LinhasEncomendas implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "id_encomenda", nullable = false)
     private String idEncomenda;
@@ -44,6 +44,7 @@ public class LinhasEncomendas implements Serializable {
     @Column(name = "total_linha", nullable = false)
     private BigDecimal totalLinha;
 
+    @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
 

@@ -1,14 +1,13 @@
 package org.example.estufaprodmanager.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.example.estufaprodmanager.enums.EstadoProduto;
+import org.example.estufaprodmanager.enums.UnidadeMedida;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -26,6 +25,7 @@ public class Produtos implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
     private String id;
 
@@ -50,8 +50,9 @@ public class Produtos implements Serializable {
     @Column(name = "quantidade_disponivel", nullable = false)
     private Long quantidadeDisponivel;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "unidade_medida", nullable = false)
-    private String unidadeMedida;
+    private UnidadeMedida unidadeMedida;
 
     @Column(name = "validade")
     private Date validade;
@@ -62,7 +63,8 @@ public class Produtos implements Serializable {
     @Column(name = "data_embalamento", nullable = false)
     private Date dataEmbalamento;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "estado_produto", nullable = false)
-    private String estadoProduto;
+    private EstadoProduto estadoProduto;
 
 }

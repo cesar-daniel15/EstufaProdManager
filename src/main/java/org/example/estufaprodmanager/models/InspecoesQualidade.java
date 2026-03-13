@@ -1,18 +1,18 @@
 package org.example.estufaprodmanager.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.example.estufaprodmanager.enums.ResultadoQualidade;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -26,8 +26,9 @@ public class InspecoesQualidade implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "id_colheita", nullable = false)
     private String idColheita;
@@ -41,8 +42,9 @@ public class InspecoesQualidade implements Serializable {
     @Column(name = "quantidade_rejeitada")
     private BigDecimal quantidadeRejeitada;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "resultado_qualidade")
-    private String resultadoQualidade;
+    private ResultadoQualidade resultadoQualidade;
 
     @Column(name = "anexos")
     private String anexos;
@@ -50,6 +52,7 @@ public class InspecoesQualidade implements Serializable {
     @Column(name = "estado_inspecao")
     private String estadoInspecao;
 
+    @CreationTimestamp
     @Column(name = "data_criacao", nullable = false)
     private Date dataCriacao;
 
