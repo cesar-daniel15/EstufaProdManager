@@ -12,6 +12,7 @@ import org.example.estufaprodmanager.enums.UnidadeMedida;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -27,7 +28,7 @@ public class Produtos implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
-    private String id;
+    private UUID id;
 
     @Column(name = "nome", nullable = false)
     private String nome;
