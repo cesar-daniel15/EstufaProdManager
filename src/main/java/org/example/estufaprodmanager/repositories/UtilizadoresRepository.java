@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.util.UUID;
 
 public interface UtilizadoresRepository extends JpaRepository<Utilizadores, UUID>, JpaSpecificationExecutor<Utilizadores> {
-
+    boolean existsByEmail(String email);
 }

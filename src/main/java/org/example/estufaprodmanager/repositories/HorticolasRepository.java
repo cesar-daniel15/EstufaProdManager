@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import java.util.UUID;
 
 public interface HorticolasRepository extends JpaRepository<Horticolas, UUID>, JpaSpecificationExecutor<Horticolas> {
-
+    boolean existsByNome(String nome);
 }
