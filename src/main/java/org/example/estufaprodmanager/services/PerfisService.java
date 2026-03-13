@@ -52,7 +52,7 @@ public class PerfisService {
         if (repository.existsById(id)){
             repository.deleteById(id);
         } else {
-            throw new RuntimeException("Erro ao apagar funcionalidade");
+            throw new RuntimeException("Erro ao apagar perfil");
         }
     }
 }
