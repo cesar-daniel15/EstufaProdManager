@@ -4,6 +4,8 @@ import org.example.estufaprodmanager.models.Colaboradores;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface ColaboradoresRepository extends JpaRepository<Colaboradores, String>, JpaSpecificationExecutor<Colaboradores> {
+import java.util.UUID;
+
+public interface ColaboradoresRepository extends JpaRepository<Colaboradores, UUID>, JpaSpecificationExecutor<Colaboradores> {
 
 }

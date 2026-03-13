@@ -4,6 +4,8 @@ import org.example.estufaprodmanager.models.Produtos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface ProdutosRepository extends JpaRepository<Produtos, String>, JpaSpecificationExecutor<Produtos> {
+import java.util.UUID;
+
+public interface ProdutosRepository extends JpaRepository<Produtos, UUID>, JpaSpecificationExecutor<Produtos> {
 
 }
